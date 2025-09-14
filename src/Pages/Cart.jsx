@@ -1,10 +1,12 @@
 // CartPage.jsx
 
+import { useSelector } from "react-redux";
+
 
 export default function Cart() {
   // Static dummy cart data (can be replaced with context or API later)
 
-
+const {items,totalPrice,totalQuantity} = useSelector(state=> state.Cart)
   
   const cartItems = [
     {
@@ -23,10 +25,10 @@ export default function Cart() {
     },
   ];
 
-  const totalPrice = cartItems.reduce(
-    (acc, item) => acc + item.price * item.quantity,
-    0
-  );
+  // const totalPrice = cartItems.reduce(
+  //   (acc, item) => acc + item.price * item.quantity,
+  //   0
+  // );
 
   return (
     <div className="max-w-5xl mx-auto px-4 py-10">

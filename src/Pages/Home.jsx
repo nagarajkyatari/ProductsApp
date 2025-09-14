@@ -10,7 +10,7 @@ import LoadingScreen from '../components/LoadingScreen';
 export default function Home() {
 
   const {data, loading, error} = useSelector((state) => state.Products)
-  console.log(data,loading,error);
+  // console.log(data,loading,error);
   const dispatch = useDispatch();
 
   useEffect(() => {
